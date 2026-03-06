@@ -7,7 +7,8 @@ import { Button } from "@/components/ui/button"
 import { TrendingUp, Zap, Users, Code, BarChart3, Rocket, CircleDollarSign, CheckCircle2, Globe, ShieldCheck, Layout, Play, ArrowRight } from "lucide-react"
 import { motion } from "framer-motion"
 import { Testimonials } from "@/components/Testimonials"
-import { useEffect, useState } from "react"
+import { useEffect, useState, useRef } from "react"
+import { Partners } from "@/components/Partners"
 
 interface Game {
   id: number;
@@ -58,34 +59,53 @@ export default function Home() {
         {/* Hero Section */}
         <section className="relative pt-28 pb-20 md:pt-40 md:pb-32 overflow-hidden bg-[#020617] text-white">
           {/* Advanced Dynamic Background */}
-          <div className="absolute inset-0">
-            <div className="absolute inset-0 bg-gradient-to-br from-blue-600/20 via-indigo-600/20 to-purple-600/20"></div>
+          <div className="absolute inset-0 overflow-hidden">
+            <div className="absolute inset-0 bg-[#020617]"></div>
 
-            {/* Animated Blobs */}
+            {/* Primary Cinematic Gradients */}
+            <div className="absolute top-0 left-1/4 w-[1000px] h-[1000px] bg-blue-600/10 rounded-full blur-[150px] -translate-y-1/2 -translate-x-1/2"></div>
+            <div className="absolute bottom-0 right-1/4 w-[1200px] h-[1200px] bg-indigo-600/10 rounded-full blur-[180px] translate-y-1/2 translate-x-1/2"></div>
+            <div className="absolute top-1/2 left-1/2 w-[800px] h-[800px] bg-purple-600/5 rounded-full blur-[120px] -translate-x-1/2 -translate-y-1/2"></div>
+
+            {/* Moving Light Orbs - Enhanced */}
             <motion.div
               animate={{
                 scale: [1, 1.2, 1],
-                x: [0, 50, 0],
-                y: [0, -30, 0],
+                x: [0, 80, 0],
+                y: [0, -40, 0],
+                opacity: [0.1, 0.2, 0.1]
               }}
-              transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
-              className="absolute -top-24 -left-24 w-96 h-96 bg-blue-500/20 rounded-full blur-[100px]"
+              transition={{ duration: 15, repeat: Infinity, ease: "easeInOut" }}
+              className="absolute top-20 left-20 w-96 h-96 bg-blue-400/20 rounded-full blur-[120px]"
             />
             <motion.div
               animate={{
                 scale: [1, 1.3, 1],
-                x: [0, -50, 0],
-                y: [0, 30, 0],
+                x: [0, -100, 0],
+                y: [0, 50, 0],
+                opacity: [0.1, 0.15, 0.1]
               }}
-              transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-              className="absolute -bottom-24 -right-24 w-[400px] h-[400px] bg-indigo-500/10 rounded-full blur-[120px]"
+              transition={{ duration: 22, repeat: Infinity, ease: "easeInOut" }}
+              className="absolute bottom-40 right-40 w-[500px] h-[500px] bg-indigo-500/15 rounded-full blur-[140px]"
             />
 
-            {/* Glowing Grid */}
-            <div className="absolute inset-0 opacity-10"
+            {/* Premium Grid System */}
+            <div className="absolute inset-0 opacity-[0.07]"
               style={{
-                backgroundImage: `radial-gradient(circle, #3b82f6 1px, transparent 1px)`,
-                backgroundSize: '40px 40px'
+                backgroundImage: `
+                  linear-gradient(to right, #3b82f6 1px, transparent 1px),
+                  linear-gradient(to bottom, #3b82f6 1px, transparent 1px)
+                `,
+                backgroundSize: '80px 80px',
+                maskImage: 'radial-gradient(circle at center, black, transparent 80%)'
+              }}>
+            </div>
+
+            {/* Subtle Noise Texture */}
+            <div className="absolute inset-0 opacity-[0.02] pointer-events-none mix-blend-overlay"
+              style={{
+                backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E")`,
+                filter: 'contrast(120%) brightness(120%)'
               }}>
             </div>
           </div>
@@ -101,21 +121,22 @@ export default function Home() {
                 className="text-5xl md:text-7xl font-black mb-8 tracking-tighter leading-tight text-white"
                 variants={itemVariants}
               >
-                Powering the Future of Casual <br />
+                Scale Your Revenue with <br />
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400">
-                  & HTML5 Gaming
+                  Premium HTML5 Gaming
                 </span>
               </motion.h1>
 
               <motion.p
-                className="text-xl md:text-2xl text-slate-300 mb-10 max-w-2xl mx-auto font-medium"
+                className="text-xl md:text-2xl text-slate-300 mb-10 max-w-3xl mx-auto font-medium"
                 variants={itemVariants}
               >
-                Connect publishers with premium HTML5 games, unlock seamless revenue sharing, and captivate global gaming audiences—all with zero plugins required.
+                Partner with the world's leading gaming infrastructure. Unlock up to 45% higher revenue, skyrocket user engagement, and deliver high-performance games with zero friction.
               </motion.p>
 
+              {/* CTA Button Block */}
               <motion.div
-                className="flex flex-col sm:flex-row gap-6 justify-center"
+                className="flex justify-center mb-20"
                 variants={itemVariants}
               >
                 <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="relative group">
@@ -138,20 +159,45 @@ export default function Home() {
                     </Button>
                   </Link>
                 </motion.div>
+              </motion.div>
 
-                {/* <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="relative group">
-                  <div className="absolute -inset-1 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-full blur opacity-40 group-hover:opacity-100 transition duration-1000 animate-pulse"></div>
-                  <Link href="/advertisers">
-                    <Button size="lg" className="relative bg-white text-blue-600 hover:bg-blue-50 text-xl px-12 py-8 rounded-full shadow-2xl overflow-hidden font-black">
-                      <motion.div
-                        animate={{ x: ['100%', '-100%'] }}
-                        transition={{ duration: 3, repeat: Infinity, ease: 'linear' }}
-                        className="absolute inset-0 w-1/2 bg-gradient-to-r from-transparent via-blue-100/30 to-transparent skew-x-12 -translate-x-full"
-                      />
-                      For Advertisers
-                    </Button>
-                  </Link>
-                </motion.div> */}
+              {/* Premium Floating Metrics Cards Block */}
+              <motion.div
+                className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-5xl mx-auto"
+                variants={itemVariants}
+              >
+                {[
+                  { label: "Avg. Revenue Boost", value: "+45%", icon: TrendingUp, color: "text-blue-400", delay: 0 },
+                  { label: "Peak eCPM", value: "$12.40", icon: CircleDollarSign, color: "text-indigo-400", delay: 0.1 },
+                  { label: "Global Fill Rate", value: "99.9%", icon: Zap, color: "text-purple-400", delay: 0.2 }
+                ].map((stat, i) => (
+                  <motion.div
+                    key={i}
+                    whileHover={{ y: -10, scale: 1.02 }}
+                    initial={{ opacity: 0, y: 30 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{
+                      delay: 0.5 + stat.delay,
+                      duration: 0.8,
+                      type: "spring",
+                      stiffness: 100
+                    }}
+                    className="relative p-8 rounded-[2.5rem] bg-white/[0.03] backdrop-blur-2xl border border-white/10 hover:border-white/20 transition-all group overflow-hidden text-left"
+                  >
+                    {/* Interactive Glow */}
+                    <div className="absolute -inset-10 bg-gradient-to-br from-blue-500/10 via-transparent to-purple-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-700 blur-3xl"></div>
+
+                    <div className="relative z-10">
+                      <stat.icon className={`w-8 h-8 ${stat.color} mb-6 transform group-hover:scale-110 group-hover:rotate-6 transition-transform duration-500`} />
+                      <div className="text-4xl font-black text-white mb-2 tracking-tighter">
+                        {stat.value}
+                      </div>
+                      <div className="text-slate-400 font-black text-xs tracking-[0.2em] uppercase">
+                        {stat.label}
+                      </div>
+                    </div>
+                  </motion.div>
+                ))}
               </motion.div>
             </motion.div>
           </div>
@@ -258,95 +304,6 @@ export default function Home() {
             </div>
           </div>
         </section>
-        {/* Try Our Games Section */}
-
-
-        {/* How It Works Section - Redesigned */}
-        <section className="py-24 relative overflow-hidden bg-slate-50/50">
-          {/* Subtle Background Pattern */}
-          <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: 'radial-gradient( 1px, transparent 1px)', backgroundSize: '32px 32px' }}></div>
-
-          <div className="container mx-auto px-4 relative z-10">
-            <div className="text-center max-w-3xl mx-auto mb-20">
-              <motion.div
-                initial={{ opacity: 0, y: 10 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                className="inline-block px-4 py-1.5 mb-4 rounded-full bg-blue-100 text-blue-600 text-sm font-bold tracking-wider uppercase"
-              >
-                Our Process
-              </motion.div>
-              <motion.h2
-                className="text-5xl md:text-6xl font-extrabold mb-6 text-gray-900 tracking-tight"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-              >
-                How <span className="text-blue-600">SnappGame</span> Works
-              </motion.h2>
-              <motion.p
-                className="text-xl text-gray-600 leading-relaxed"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.1 }}
-              >
-                A streamlined ecosystem designed to maximize growth for developers, publishers, and advertisers alike.
-              </motion.p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 pl-4 md:pl-0">
-              {[
-                {
-                  icon: Code,
-                  title: "Quick Integration",
-                  desc: "Add our lightweight SDK to your platform with minimal code. Access hundreds of premium HTML5 games instantly.",
-                  step: "01",
-                  color: "bg-blue-600"
-                },
-                {
-                  icon: Rocket,
-                  title: "Launch & Engage",
-                  desc: "Select games that match your audience. Our platform handles all the heavy lifting, hosting, and updates.",
-                  step: "02",
-                  color: "bg-indigo-600"
-                },
-                {
-                  icon: BarChart3,
-                  title: "Monetize & Scale",
-                  desc: "Maximize revenue through high-performing ad formats and detailed analytics. Scale your gaming business with real-time insights.",
-                  step: "03",
-                  color: "bg-blue-700"
-                }
-              ].map((item, index) => (
-                <motion.div
-                  key={index}
-                  className="group relative"
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.2 }}
-                >
-                  <div className="relative p-10 rounded-[3rem] bg-white/70 backdrop-blur-xl border border-white transition-all duration-500 hover:shadow-2xl hover:shadow-blue-500/10 hover:-translate-y-2 overflow-hidden h-full">
-                    {/* Background Step Number */}
-                    <span className="absolute -top-10 -right-10 text-[10rem] font-extrabold text-blue-500/5 select-none transition-all duration-500 group-hover:text-blue-500/10">
-                      {item.step}
-                    </span>
-
-                    <div className={`w-16 h-16 ${item.color} rounded-2xl flex items-center justify-center mb-8 shadow-lg shadow-blue-500/20 transform -rotate-3 group-hover:rotate-0 transition-transform duration-500 relative z-10`}>
-                      <item.icon className="h-8 w-8 text-white" />
-                    </div>
-
-                    <h3 className="text-2xl font-extrabold mb-4 text-gray-900 relative z-10 tracking-tight">{item.title}</h3>
-                    <p className="text-gray-600 leading-relaxed relative z-10 text-lg">
-                      {item.desc}
-                    </p>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
 
         {/* How Much Can You Earn Section */}
         <section className="py-24 bg-[#0a192f] text-white relative overflow-hidden">
@@ -446,8 +403,119 @@ export default function Home() {
                 ))}
               </div>
             </div>
+
+            {/* Bottom CTA for Revenue Section */}
+            <motion.div
+              className="mt-20 text-center"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.4 }}
+            >
+              <Link href="/enquire">
+                <Button className="bg-white text-blue-900 hover:bg-blue-50 px-12 py-8 rounded-2xl text-xl font-black shadow-[0_20px_40px_rgba(255,255,255,0.1)] transition-all duration-300 transform hover:scale-105 active:scale-95 flex items-center gap-4 mx-auto group">
+                  Get Started Now
+                  <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
+                </Button>
+              </Link>
+              <p className="mt-6 text-blue-200/50 font-bold tracking-widest uppercase text-xs">
+                No upfront costs • Revenue shared daily • 5 Minute Setup
+              </p>
+            </motion.div>
           </div>
         </section>
+
+        <Partners />
+
+
+        {/* How It Works Section - Redesigned */}
+        <section className="py-24 relative overflow-hidden bg-slate-50/50">
+          {/* Subtle Background Pattern */}
+          <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: 'radial-gradient( 1px, transparent 1px)', backgroundSize: '32px 32px' }}></div>
+
+          <div className="container mx-auto px-4 relative z-10">
+            <div className="text-center max-w-3xl mx-auto mb-20">
+              <motion.div
+                initial={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                className="inline-block px-4 py-1.5 mb-4 rounded-full bg-blue-100 text-blue-600 text-sm font-bold tracking-wider uppercase"
+              >
+                Our Process
+              </motion.div>
+              <motion.h2
+                className="text-5xl md:text-6xl font-extrabold mb-6 text-gray-900 tracking-tight"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+              >
+                How <span className="text-blue-600">SnappGame</span> Works
+              </motion.h2>
+              <motion.p
+                className="text-xl text-gray-600 leading-relaxed"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.1 }}
+              >
+                A streamlined ecosystem designed to maximize growth for developers, publishers, and advertisers alike.
+              </motion.p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 pl-4 md:pl-0">
+              {[
+                {
+                  icon: Code,
+                  title: "Quick Integration",
+                  desc: "Add our lightweight SDK to your platform with minimal code. Access hundreds of premium HTML5 games instantly.",
+                  step: "01",
+                  color: "bg-blue-600"
+                },
+                {
+                  icon: Rocket,
+                  title: "Launch & Engage",
+                  desc: "Select games that match your audience. Our platform handles all the heavy lifting, hosting, and updates.",
+                  step: "02",
+                  color: "bg-indigo-600"
+                },
+                {
+                  icon: BarChart3,
+                  title: "Monetize & Scale",
+                  desc: "Maximize revenue through high-performing ad formats and detailed analytics. Scale your gaming business with real-time insights.",
+                  step: "03",
+                  color: "bg-blue-700"
+                }
+              ].map((item, index) => (
+                <motion.div
+                  key={index}
+                  className="group relative"
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.2 }}
+                >
+                  <div className="relative p-10 rounded-[3rem] bg-white/70 backdrop-blur-xl border border-white transition-all duration-500 hover:shadow-2xl hover:shadow-blue-500/10 hover:-translate-y-2 overflow-hidden h-full">
+                    {/* Background Step Number */}
+                    <span className="absolute -top-10 -right-10 text-[10rem] font-extrabold text-blue-500/5 select-none transition-all duration-500 group-hover:text-blue-500/10">
+                      {item.step}
+                    </span>
+
+                    <div className={`w-16 h-16 ${item.color} rounded-2xl flex items-center justify-center mb-8 shadow-lg shadow-blue-500/20 transform -rotate-3 group-hover:rotate-0 transition-transform duration-500 relative z-10`}>
+                      <item.icon className="h-8 w-8 text-white" />
+                    </div>
+
+                    <h3 className="text-2xl font-extrabold mb-4 text-gray-900 relative z-10 tracking-tight">{item.title}</h3>
+                    <p className="text-gray-600 leading-relaxed relative z-10 text-lg">
+                      {item.desc}
+                    </p>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <Testimonials />
 
         {/* Ultimate Experience Our Games Showcase - Light Theme Reveal */}
         <section className="py-24 bg-white relative overflow-hidden">
@@ -633,8 +701,6 @@ export default function Home() {
           </div>
         </section>
 
-        <Testimonials />
-
         {/* Ultimate Ready to Get Started? CTA Revamp */}
         <section className="py-24 relative overflow-hidden">
           {/* Advanced Dynamic Background */}
@@ -739,6 +805,6 @@ export default function Home() {
         </section>
       </main>
       <Footer />
-    </div>
+    </div >
   )
 }

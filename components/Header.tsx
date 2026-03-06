@@ -26,7 +26,7 @@ export function Header() {
     { label: "Publishers", href: "/publishers" },
     { label: "Advertisers", href: "/advertisers" },
     { label: "HTML5 Games", href: "/games" },
-    { label: "Blog", href: "/blog" },
+    // { label: "Blog", href: "/blog" },
   ]
 
   const isActive = (href: string) => {

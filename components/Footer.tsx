@@ -31,21 +31,7 @@ export function Footer() {
                   About Us
                 </Link>
               </li>
-              <li>
-                <Link href="/press" className="hover:text-white transition-colors">
-                  Press Coverages
-                </Link>
-              </li>
-              <li>
-                <Link href="/jobs" className="hover:text-white transition-colors">
-                  Jobs
-                </Link>
-              </li>
-              <li>
-                <Link href="/media-kit" className="hover:text-white transition-colors">
-                  Media Kit
-                </Link>
-              </li>
+
             </ul>
           </div>
 
@@ -90,11 +76,7 @@ export function Footer() {
                   Developer Docs
                 </Link>
               </li>
-              <li>
-                <Link href="/dashboard" className="hover:text-white transition-colors">
-                  Dashboard
-                </Link>
-              </li>
+
               <li>
                 <Link href="/support" className="hover:text-white transition-colors">
                   Support
