@@ -125,7 +125,9 @@ function TestimonialCard({ testimonial, index }: { testimonial: any, index: numb
 
                     <div className="relative">
                         <Quote className="absolute -top-4 -left-4 w-12 h-12 text-white/5 -z-0" />
-                        &quot;{testimonial.content}&quot;
+                        <p className="relative z-10 text-white text-lg md:text-xl leading-relaxed font-medium mb-8">
+                            &quot;{testimonial.content}&quot;
+                        </p>
                     </div>
                 </div>
 
@@ -212,7 +214,7 @@ export function Testimonials() {
                     </motion.h2>
 
                     <motion.p
-                        className="text-xl md:text-2xl text-slate-400 font-medium max-w-2xl mx-auto"
+                        className="text-xl md:text-2xl text-white font-medium max-w-2xl mx-auto"
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
