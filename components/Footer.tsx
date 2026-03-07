@@ -72,20 +72,7 @@ export function Footer() {
             <p className="text-base leading-relaxed max-w-sm">
               Revolutionizing the casual gaming landscape with high-performance HTML5 experiences. Join our ecosystem of publishers and advertisers.
             </p>
-            <div className="flex items-center gap-4 pt-4">
-              {socialLinks.map((social) => (
-                <motion.a
-                  key={social.label}
-                  href={social.href}
-                  aria-label={social.label}
-                  whileHover={{ y: -5, scale: 1.1 }}
-                  whileTap={{ scale: 0.95 }}
-                  className={`p-2.5 rounded-full bg-white/5 border border-white/10 ${social.color} hover:bg-white/10 hover:border-white/20 transition-all shadow-sm`}
-                >
-                  <social.icon className="w-5 h-5" />
-                </motion.a>
-              ))}
-            </div>
+
           </motion.div>
 
           {/* Navigation Links */}
