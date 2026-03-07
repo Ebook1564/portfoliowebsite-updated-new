@@ -1,6 +1,7 @@
 "use client"
 
 import Link from "next/link"
+import Image from "next/image"
 import { Facebook, Twitter, Linkedin, Instagram, ArrowUp, Mail, ExternalLink } from "lucide-react"
 import { motion, AnimatePresence } from "framer-motion"
 import { useState } from "react"
@@ -43,7 +44,7 @@ export function Footer() {
       <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-purple-500/5 rounded-full blur-[120px] pointer-events-none" />
 
       <div className="container mx-auto px-6 pt-20 pb-12 relative z-10">
-        <motion.div 
+        <motion.div
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
@@ -55,12 +56,17 @@ export function Footer() {
             <Link href="/" className="flex items-center gap-3 group">
               <div className="relative">
                 <div className="absolute -inset-2 bg-blue-500/20 rounded-xl blur-lg group-hover:bg-blue-500/40 transition-all" />
-                <div className="relative w-12 h-12 bg-gradient-to-br from-blue-600 to-indigo-700 rounded-xl flex items-center justify-center shadow-lg transform group-hover:scale-110 transition-transform duration-300">
-                  <span className="text-2xl font-black text-white italic">S</span>
+                <div className="relative w-12 h-12 overflow-hidden transform group-hover:scale-110 transition-transform duration-300">
+                  <Image
+                    src="/SnappGames-Logo-Alternative.png"
+                    alt="SnappGames Logo"
+                    fill
+                    className="object-contain"
+                  />
                 </div>
               </div>
-              <span className="text-2xl font-bold text-white tracking-tight group-hover:text-blue-400 transition-colors">
-                SnappGame
+              <span className="text-2xl font-black text-white tracking-tighter group-hover:opacity-80 transition-opacity">
+                SNAPP<span className="bg-gradient-to-r from-fuchsia-500 to-violet-600 text-transparent bg-clip-text">GAMES</span>
               </span>
             </Link>
             <p className="text-base leading-relaxed max-w-sm">
@@ -117,7 +123,7 @@ export function Footer() {
           <motion.div variants={itemVariants} className="lg:col-span-3">
             <h4 className="text-white font-bold mb-6 text-sm uppercase tracking-[0.2em]">Connect</h4>
             <div className="space-y-4">
-              <Link 
+              <Link
                 href="/enquire"
                 className="group flex flex-col p-4 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-blue-500/50 transition-all duration-300"
               >
@@ -127,7 +133,7 @@ export function Footer() {
                 </div>
                 <p className="text-xs text-gray-500">Get in touch for partnerships</p>
               </Link>
-              <Link 
+              <Link
                 href="/enquire"
                 className="group flex flex-col p-4 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-indigo-500/50 transition-all duration-300"
               >
@@ -148,9 +154,9 @@ export function Footer() {
               <Link href="/privacy" className="hover:text-white transition-colors underline-offset-4 hover:underline">
                 Privacy Policy
               </Link>
-              
+
             </div>
-            
+
             <p className="order-last md:order-none font-medium">
               © 2026 <span className="text-white">SnappGames Technologies</span>. All rights reserved.
             </p>

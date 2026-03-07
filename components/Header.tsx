@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react"
 import Link from "next/link"
+import Image from "next/image"
 import { usePathname } from "next/navigation"
 import { Menu, X } from "lucide-react"
 import { motion, AnimatePresence, useScroll, useMotionValueEvent } from "framer-motion"
@@ -52,8 +53,18 @@ export function Header() {
       <div className="container mx-auto px-6 py-3 md:py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <Link href="/" className="text-xl md:text-2xl font-black text-white tracking-tighter hover:text-blue-400 transition-all duration-300">
-            SNAPP<span className="text-blue-500">GAMES</span>
+          <Link href="/" className="flex items-center gap-3 group transition-all duration-300">
+            <div className="relative w-10 h-10 md:w-12 md:h-12 overflow-hidden">
+              <Image
+                src="/SnappGames-Logo-Alternative.png"
+                alt="SnappGames Logo"
+                fill
+                className="object-contain group-hover:scale-110 transition-transform duration-300"
+              />
+            </div>
+            <span className="text-xl md:text-2xl font-black text-white tracking-tighter group-hover:opacity-80 transition-opacity">
+              SNAPP<span className="bg-gradient-to-r from-fuchsia-500 to-violet-600 text-transparent bg-clip-text">GAMES</span>
+            </span>
           </Link>
 
           {/* Desktop Navigation */}
