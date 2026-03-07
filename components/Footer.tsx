@@ -66,7 +66,7 @@ export function Footer() {
                 </div>
               </div>
               <span className="text-2xl font-black text-white tracking-tighter group-hover:opacity-80 transition-opacity">
-                SNAPP<span className="bg-gradient-to-r from-fuchsia-500 to-violet-600 text-transparent bg-clip-text">GAMES</span>
+                SNAPP<span className="text-[#c224e9]">GAMES</span>
               </span>
             </Link>
             <p className="text-base leading-relaxed max-w-sm">
