@@ -116,7 +116,7 @@ export const Partners = () => {
                     viewport={{ once: true }}
                     className="text-slate-400 text-xl max-w-2xl mx-auto font-medium"
                 >
-                    We power the world's most ambitious gaming platforms with premium content and scalable infrastructure.
+                    We power the world&apos;s most ambitious gaming platforms with premium content and scalable infrastructure.
                 </motion.p>
             </div>
 

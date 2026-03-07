@@ -131,7 +131,7 @@ export default function Home() {
                 className="text-xl md:text-2xl text-slate-300 mb-10 max-w-3xl mx-auto font-medium"
                 variants={itemVariants}
               >
-                Partner with the world's leading gaming infrastructure. Unlock up to 45% higher revenue, skyrocket user engagement, and deliver high-performance games with zero friction.
+                Partner with the world&apos;s leading gaming infrastructure. Unlock up to 45% higher revenue, skyrocket user engagement, and deliver high-performance games with zero friction.
               </motion.p>
 
               {/* CTA Button Block */}

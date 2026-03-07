@@ -122,7 +122,7 @@ export default function EnquirePage() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
             >
-              Let's build the <br />
+              Let&apos;s build the <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400">
                 Future Together
               </span>
@@ -163,7 +163,7 @@ export default function EnquirePage() {
                     Why partner with <span className="text-blue-600">SnappGame?</span>
                   </h2>
                   <p className="text-lg text-slate-600 font-medium leading-relaxed">
-                    We're not just a platform; we're your growth engine. Join 500+ premium publishers and world-class advertisers.
+                    We&apos;re not just a platform; we&apos;re your growth engine. Join 500+ premium publishers and world-class advertisers.
                   </p>
                 </motion.div>
 

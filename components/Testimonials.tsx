@@ -125,9 +125,7 @@ function TestimonialCard({ testimonial, index }: { testimonial: any, index: numb
 
                     <div className="relative">
                         <Quote className="absolute -top-4 -left-4 w-12 h-12 text-white/5 -z-0" />
-                        <p className="relative z-10 text-gray-200 text-lg md:text-xl leading-relaxed font-medium mb-8">
-                            "{testimonial.content}"
-                        </p>
+                        &quot;{testimonial.content}&quot;
                     </div>
                 </div>
 
@@ -209,7 +207,7 @@ export function Testimonials() {
                     >
                         Trusted by the <br />
                         <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400">
-                            World's Best Teams
+                            World&apos;s Best Teams
                         </span>
                     </motion.h2>
 
@@ -220,7 +218,7 @@ export function Testimonials() {
                         viewport={{ once: true }}
                         transition={{ delay: 0.1 }}
                     >
-                        Don't just take our word for it. Hear from the visionaries and developers who are building the future of gaming on SnappGames.
+                        Don&apos;t just take our word for it. Hear from the visionaries and developers who are building the future of gaming on SnappGames.
                     </motion.p>
                 </div>
 
