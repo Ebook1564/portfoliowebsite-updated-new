@@ -163,7 +163,7 @@ export default function EnquirePage() {
                     Why partner with <span className="text-blue-600">SnappGame?</span>
                   </h2>
                   <p className="text-lg text-slate-600 font-medium leading-relaxed">
-                    We&apos;re not just a platform; we&apos;re your growth engine. Join 500+ premium publishers and world-class advertisers.
+                    We&apos;re not just a platform; we&apos;re your growth engine. Become part of a growing network of partners maximizing revenue with our high-performance integration.
                   </p>
                 </motion.div>
 
@@ -316,7 +316,7 @@ export default function EnquirePage() {
                                   value={formData.phone}
                                   onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                                   className="w-full px-6 py-5 bg-slate-50 border border-slate-100 rounded-2xl focus:ring-4 focus:ring-blue-500/10 focus:border-blue-500 focus:bg-white transition-all duration-300 font-medium text-slate-900 placeholder:text-slate-400 min-w-0"
-                                  placeholder="+91 9876543210"
+                                  placeholder="9876543210"
                                 />
                               </div>
                             </div>

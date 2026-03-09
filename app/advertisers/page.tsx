@@ -240,7 +240,7 @@ export default function AdvertisersPage() {
 
                   <ul className="space-y-6 mb-12">
                     {[
-                      "Global reach with 180+ countries supported",
+                      "Global reach with 30+ countries supported",
                       "Advanced demographic and interest targeting",
                       "Real-time analytics and optimization",
                       "Strict brand safety and fraud protection"
@@ -265,10 +265,10 @@ export default function AdvertisersPage() {
 
               <div className="md:w-1/2 grid grid-cols-1 sm:grid-cols-2 gap-6">
                 {[
-                  { metric: "50M+", label: "Monthly Impressions", icon: Globe },
-                  { metric: "2.8%", label: "Average CTR", icon: TrendingUp },
+                  { metric: "15M+", label: "Monthly Impressions", icon: Globe },
+                  { metric: "2%", label: "Average CTR", icon: TrendingUp },
                   { metric: "95%", label: "Completion Rate", icon: Play },
-                  { metric: "180+", label: "Countries Reached", icon: Users },
+                  { metric: "30+", label: "Countries Reached", icon: Users },
                 ].map((stat, i) => (
                   <motion.div
                     key={i}
@@ -316,7 +316,7 @@ export default function AdvertisersPage() {
                   viewport={{ once: true }}
                 >
                   <div className="inline-block px-4 py-1.5 mb-4 rounded-full bg-blue-100 text-blue-600 text-sm font-bold tracking-wider uppercase">
-                    The SnappGame Advantage
+                    The SnappGames Advantage
                   </div>
                   <h2 className="text-4xl md:text-6xl font-black mb-8 text-gray-900 tracking-tighter">
                     Why Advertise <br /><span className="text-blue-600">With Us?</span>

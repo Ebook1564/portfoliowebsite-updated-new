@@ -251,13 +251,13 @@ export default function Home() {
                 {
                   icon: Users,
                   title: "Peak Engagement",
-                  desc: "Our hand-picked library of over 500+ premium HTML5 games are engineered for maximum session length and player retention.",
+                  desc: "Our hand-picked library of over 100+ instant-play HTML5 games are engineered for maximum session length and player retention.",
                   color: "blue"
                 },
                 {
                   icon: Globe,
                   title: "Global Distribution",
-                  desc: "Reach audiences in over 150 countries with localized content and a global server network for zero-latency gaming.",
+                  desc: "Reach audiences in over 30+ countries with localized content and a global server network for zero-latency gaming.",
                   color: "indigo"
                 },
                 {
@@ -331,10 +331,10 @@ export default function Home() {
 
                   <ul className="space-y-6 mb-12">
                     {[
-                      "Up to 30% higher eCPMs than competitors",
-                      "Instant access to 500+ premium advertisers",
-                      "Weekly payments with zero hidden fees",
-                      "Dedicated account manager for top partners"
+                      "Earn passive income from ads shown inside the games, with half of the generated ad revenue shared directly with you",
+                      // "Instant access to 500+ premium advertisers",
+                      "Monthly payments with zero hidden fees",
+                      "Partner-specific dashboards with personalized insights"
                     ].map((text, i) => (
                       <motion.li
                         key={i}
@@ -364,28 +364,28 @@ export default function Home() {
                 {[
                   {
                     label: "Avg. eCPM",
-                    value: "$12.40",
+                    value: "$3.50",
                     detail: "Tier 1 Traffic",
                     icon: TrendingUp
                   },
-                  {
-                    label: "Monthly Payout",
-                    value: "$50K+",
-                    detail: "For Top Partners",
-                    icon: CircleDollarSign
-                  },
+                  // {
+                  //   label: "Monthly Payout",
+                  //   value: "$50K+",
+                  //   detail: "For Top Partners",
+                  //   icon: CircleDollarSign
+                  // },
                   {
                     label: "Fill Rate",
                     value: "99.9%",
                     detail: "Global Coverage",
                     icon: Zap
                   },
-                  {
-                    label: "Total Yield",
-                    value: "+45%",
-                    detail: "Organic Growth",
-                    icon: Rocket
-                  }
+                  // {
+                  //   label: "Total Yield",
+                  //   value: "+45%",
+                  //   detail: "Organic Growth",
+                  //   icon: Rocket
+                  // }
                 ].map((stat, i) => (
                   <motion.div
                     key={i}
@@ -449,7 +449,7 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
               >
-                How <span className="text-blue-600">SnappGame</span> Works
+                How <span className="text-blue-600">SnappGames</span> Works
               </motion.h2>
               <motion.p
                 className="text-xl text-gray-600 leading-relaxed"
@@ -767,7 +767,7 @@ export default function Home() {
                   </h2>
 
                   <p className="text-xl md:text-2xl text-slate-300 mb-12 max-w-2xl mx-auto font-medium">
-                    Join thousands of partners already maximizing revenue with our high-performance integration.
+                    Become part of a growing network of partners maximizing revenue with our high-performance integration.
                   </p>
 
                   <div className="flex flex-wrap justify-center gap-6">

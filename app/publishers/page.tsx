@@ -99,7 +99,7 @@ export default function PublishersPage() {
                                 className="text-xl md:text-2xl text-slate-300 mb-10 max-w-2xl mx-auto font-medium"
                                 variants={itemVariants}
                             >
-                                Unlock higher eCPMs and engagement by integrating our premium library of 500+ HTML5 games directly into your platform.
+                                Unlock higher eCPMs and engagement by integrating our premium library of 100+ HTML5 games directly into your platform.
                             </motion.p>
 
                             <motion.div
@@ -168,7 +168,7 @@ export default function PublishersPage() {
                                     title: "Plug-and-Play SDK",
                                     desc: "Get up and running in minutes. Our lightweight SDK is optimized for speed and handles all the complexity of game delivery.",
                                     icon: Zap,
-                                    stats: "5 Minute Integration",
+                                    stats: "30 Minutes Integration",
                                     color: "blue"
                                 },
                                 {
@@ -180,9 +180,9 @@ export default function PublishersPage() {
                                 },
                                 {
                                     title: "Curated Game Library",
-                                    desc: "Offer 500+ hand-picked HTML5 titles that keep users coming back. New games added weekly across all popular genres.",
+                                    desc: "Offer 100+ hand-picked HTML5 titles that keep users coming back. New games added weekly across all popular genres.",
                                     icon: Gamepad2,
-                                    stats: "99% Retention Rate",
+                                    stats: "30% Increased Retention Rate",
                                     color: "purple"
                                 },
                             ].map((item, index) => (
@@ -241,7 +241,7 @@ export default function PublishersPage() {
                                     <ul className="space-y-6 mb-12">
                                         {[
                                             "Highest revenue share in the industry",
-                                            "Weekly payouts with transparent reporting",
+                                            "Monthly payouts with transparent reporting",
                                             "Full technical support and optimization",
                                             "Exclusive access to premium game titles"
                                         ].map((text, i) => (
@@ -265,9 +265,9 @@ export default function PublishersPage() {
 
                             <div className="md:w-1/2 grid grid-cols-1 sm:grid-cols-2 gap-6">
                                 {[
-                                    { metric: "2,500+", label: "Active Publishers", icon: Users },
+                                    { metric: "325+", label: "Apps & Websites Partnered", icon: Users },
                                     { metric: "45%", label: "Avg. Revenue Boost", icon: TrendingUp },
-                                    { metric: "10M+", label: "Games Delivered", icon: Rocket },
+                                    { metric: "100+", label: "Games Delivered", icon: Rocket },
                                     { metric: "99.9%", label: "Platform Uptime", icon: Globe },
                                 ].map((stat, i) => (
                                     <motion.div
@@ -316,7 +316,7 @@ export default function PublishersPage() {
                                     viewport={{ once: true }}
                                 >
                                     <div className="inline-block px-4 py-1.5 mb-4 rounded-full bg-blue-100 text-blue-600 text-sm font-bold tracking-wider uppercase">
-                                        The SnappGame Advantage
+                                        The SnappGames Advantage
                                     </div>
                                     <h2 className="text-4xl md:text-6xl font-black mb-8 text-gray-900 tracking-tighter">
                                         Why Partner <br /><span className="text-blue-600">With Us?</span>
@@ -382,7 +382,7 @@ export default function PublishersPage() {
                                 </h2>
 
                                 <p className="text-xl md:text-2xl text-slate-300 mb-12 max-w-2xl mx-auto font-medium">
-                                    Join 2,500+ partners who are already maximizing their gaming revenue with us.
+                                    Join Hundreds of partners who are already maximizing their gaming revenue with us.
                                 </p>
 
                                 <Link href="/enquire">

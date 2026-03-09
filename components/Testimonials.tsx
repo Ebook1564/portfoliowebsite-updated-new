@@ -240,8 +240,8 @@ export function Testimonials() {
                 >
                     {[
                         { label: "Partner Satisfaction", value: "99.9%" },
-                        { label: "Active Publishers", value: "2,500+" },
-                        { label: "Games Delivered", value: "10M+" }
+                        { label: "Apps & Websites Partnered", value: "325+" },
+                        { label: "Games Delivered", value: "100+" }
                     ].map((stat, i) => (
                         <div key={i} className="text-center">
                             <div className="text-3xl font-black text-white mb-1">{stat.value}</div>
