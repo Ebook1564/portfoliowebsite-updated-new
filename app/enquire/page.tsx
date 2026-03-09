@@ -316,7 +316,7 @@ export default function EnquirePage() {
                                   value={formData.phone}
                                   onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                                   className="w-full px-6 py-5 bg-slate-50 border border-slate-100 rounded-2xl focus:ring-4 focus:ring-blue-500/10 focus:border-blue-500 focus:bg-white transition-all duration-300 font-medium text-slate-900 placeholder:text-slate-400 min-w-0"
-                                  placeholder="9876543210"
+                                  placeholder="+91 9876543210"
                                 />
                               </div>
                             </div>

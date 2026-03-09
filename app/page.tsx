@@ -168,14 +168,14 @@ export default function Home() {
               >
                 {[
                   { label: "Avg. Revenue Boost", value: "+45%", icon: TrendingUp, color: "text-blue-400", delay: 0 },
-                  { label: "Peak eCPM", value: "$12.40", icon: CircleDollarSign, color: "text-indigo-400", delay: 0.1 },
-                  { label: "Global Fill Rate", value: "99.9%", icon: Zap, color: "text-purple-400", delay: 0.2 }
+                  { label: "Peak eCPM", value: "$7.20", icon: CircleDollarSign, color: "text-indigo-400", delay: 0.1 },
+                  { label: "Increase Retention Rate", value: "30%", icon: Zap, color: "text-purple-400", delay: 0.2 }
                 ].map((stat, i) => (
                   <motion.div
                     key={i}
                     whileHover={{ y: -10, scale: 1.02 }}
                     initial={{ opacity: 0, y: 30 }}
-                    animate={{ opacity: 1, y: 0 }}
+                    animate={{ opacity: 1, y: 0 }}  
                     transition={{
                       delay: 0.5 + stat.delay,
                       duration: 0.8,
