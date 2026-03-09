@@ -12,7 +12,7 @@ export default function EnquirePage() {
     name: "",
     email: "",
     phone: "",
-    countryCode: "+91",
+    // countryCode: "+91",
     country: "",
     dailyUsers: "",
     productUrl: "",
@@ -36,7 +36,7 @@ export default function EnquirePage() {
           username: formData.name,
           useremail: formData.email,
           phonenumber: formData.phone,
-          countrycode: formData.countryCode,
+          // countrycode: formData.countryCode,
           countryName: formData.country,
           dailyactiveuser: formData.dailyUsers,
           producturl: formData.productUrl,
@@ -51,7 +51,7 @@ export default function EnquirePage() {
           name: "",
           email: "",
           phone: "",
-          countryCode: "+91",
+          
           country: "",
           dailyUsers: "",
           productUrl: ""
@@ -293,18 +293,10 @@ export default function EnquirePage() {
                                 <span className="flex items-center gap-2">
                                   <Phone className="w-4 h-4 text-blue-600" /> Phone Number
                                 </span>
-                                <span className="text-lg">
-                                  {formData.countryCode === '+91' && "🇮🇳"}
-                                  {formData.countryCode === '+1' && "🇺🇸"}
-                                  {formData.countryCode === '+44' && "🇬🇧"}
-                                  {formData.countryCode === '+971' && "🇦🇪"}
-                                  {formData.countryCode === '+49' && "🇩🇪"}
-                                  {formData.countryCode === '+61' && "🇦🇺"}
-                                  {formData.countryCode === '+65' && "🇸🇬"}
-                                </span>
+                               
                               </label>
                               <div className="flex gap-3 items-center">
-                                <select
+                                {/* <select
                                   value={formData.countryCode}
                                   onChange={(e) => setFormData({ ...formData, countryCode: e.target.value })}
                                   className="w-32 px-4 py-5 bg-slate-50 border border-slate-100 rounded-2xl focus:ring-4 focus:ring-blue-500/10 focus:border-blue-500 focus:bg-white transition-all duration-300 font-bold text-slate-900 appearance-none scrollbar-hide shrink-0"
@@ -317,7 +309,7 @@ export default function EnquirePage() {
                                   <option value="+61">🇦🇺 +61</option>
                                   <option value="+1">🇨🇦 +1</option>
                                   <option value="+65">🇸🇬 +65</option>
-                                </select>
+                                </select> */}
                                 <input
                                   type="tel"
                                   required
