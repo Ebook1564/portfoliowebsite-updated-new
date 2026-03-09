@@ -374,18 +374,18 @@ export default function Home() {
                   //   detail: "For Top Partners",
                   //   icon: CircleDollarSign
                   // },
-                  {
-                    label: "Fill Rate",
-                    value: "99.9%",
-                    detail: "Global Coverage",
-                    icon: Zap
-                  },
                   // {
-                  //   label: "Total Yield",
-                  //   value: "+45%",
-                  //   detail: "Organic Growth",
-                  //   icon: Rocket
-                  // }
+                  //   label: "Fill Rate",
+                  //   value: "99.9%",
+                  //   detail: "Global Coverage",
+                  //   icon: Zap
+                  // },
+                  {
+                    label: "Total Yield",
+                    value: "45%",
+                    detail: "Organic Growth",
+                    icon: Rocket
+                  }
                 ].map((stat, i) => (
                   <motion.div
                     key={i}
