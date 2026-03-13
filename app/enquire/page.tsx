@@ -358,7 +358,7 @@ export default function EnquirePage() {
                           {/* URL */}
                           <div className="space-y-3">
                             <label className="text-sm font-black text-slate-900 uppercase tracking-widest flex items-center gap-2 px-1">
-                              <LinkIcon className="w-4 h-4 text-blue-600" /> Product/Website URL
+                              <LinkIcon className="w-4 h-4 text-blue-600" /> Google Play App URL
                             </label>
                             <input
                               type="url"
